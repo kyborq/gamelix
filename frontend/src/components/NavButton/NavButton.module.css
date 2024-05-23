@@ -1,0 +1,14 @@
+.NavButton {
+  color: #495057;
+  transition: 250ms;
+}
+
+.NavButton:hover {
+  color: #6c757d;
+  transition: 250ms;
+}
+
+.NavButton.Active {
+  color: #f8f9fa;
+  transition: 250ms;
+}
