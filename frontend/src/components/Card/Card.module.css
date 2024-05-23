@@ -1,0 +1,12 @@
+.Card {
+  background-color: #2b3035;
+  border-radius: 18px;
+  padding: 32px;
+  user-select: none;
+}
+
+.Title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #dee2e6;
+}

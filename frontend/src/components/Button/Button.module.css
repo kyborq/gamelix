@@ -1,0 +1,20 @@
+.Button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  min-width: 120px;
+  border-radius: 20px;
+  border: none;
+  background-color: #16db65;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.Button:active {
+  transform: scale(0.98);
+  transition: 250ms;
+}

@@ -1,0 +1,22 @@
+.PageHeader {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.Title {
+  font-size: 21px;
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Navigation {
+  display: flex;
+  gap: 4px;
+}
