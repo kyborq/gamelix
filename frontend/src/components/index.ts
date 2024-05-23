@@ -4,3 +4,7 @@ export * from "./Card";
 export * from "./PageHeader";
 export * from "./Button";
 export * from "./Grid";
+export * from "./Layout";
+export * from "./Side";
+export * from "./Content";
+export * from "./SideButton";

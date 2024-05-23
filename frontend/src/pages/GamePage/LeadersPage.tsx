@@ -1,8 +1,8 @@
 import { Content, Layout, Side, SideButton } from "../../components";
 
-export const PlayersPage = () => {
+export const LeadersPage = () => {
   return (
-    <Layout title="Players">
+    <Layout title="Leaders">
       <Side>
         <SideButton label="All" current />
         <SideButton label="Newbies" />

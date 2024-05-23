@@ -1,0 +1,19 @@
+.Layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.Title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.Header {
+  display: flex;
+  padding: 32px;
+}
+
+.Content {
+  display: flex;
+  gap: 48px;
+}

@@ -1,0 +1,25 @@
+.SideButton {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  height: 48px;
+  min-width: 120px;
+  border-radius: 24px;
+  border: none;
+  /* background-color: #16db65; */
+  background-color: transparent;
+  color: #adb5bd;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+.SideButton:hover {
+  background-color: #2b3035;
+}
+
+.SideButton.Active {
+  transition: 250ms;
+  background-color: #343a40;
+}

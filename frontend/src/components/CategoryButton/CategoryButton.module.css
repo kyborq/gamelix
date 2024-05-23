@@ -12,6 +12,7 @@
   background-color: #343a40;
   color: #adb5bd;
   transition: 250ms;
+  text-decoration: none;
 }
 
 .Button:hover {

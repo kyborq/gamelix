@@ -1,6 +1,15 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 
-import { GamePage, GamesPage, PlayersPage, Root } from "./pages";
+import {
+  BugsPage,
+  GamePage,
+  GamesPage,
+  LeadersPage,
+  MessagesPage,
+  PlayersPage,
+  Root,
+  StoragePage,
+} from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -21,7 +30,27 @@ export const router = createBrowserRouter([
         children: [
           {
             index: true,
+            element: <Navigate to="players" replace />,
+          },
+          {
+            path: "players",
             element: <PlayersPage />,
+          },
+          {
+            path: "leaders",
+            element: <LeadersPage />,
+          },
+          {
+            path: "storage",
+            element: <StoragePage />,
+          },
+          {
+            path: "messages",
+            element: <MessagesPage />,
+          },
+          {
+            path: "bugs",
+            element: <BugsPage />,
           },
         ],
       },

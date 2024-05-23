@@ -11,11 +11,11 @@ export const GamePage = () => {
         action={<Button label="Edit" />}
         primary
       >
-        <CategoryButton label="Players" current />
-        <CategoryButton label="Leaders" />
-        <CategoryButton label="Storage" />
-        <CategoryButton label="Messages" />
-        <CategoryButton label="Bugs" />
+        <CategoryButton label="Players" path="players" />
+        <CategoryButton label="Leaders" path="leaders" />
+        <CategoryButton label="Storage" path="storage" />
+        <CategoryButton label="Messages" path="messages" />
+        <CategoryButton label="Bugs" path="bugs" />
       </PageHeader>
       <Outlet />
     </>

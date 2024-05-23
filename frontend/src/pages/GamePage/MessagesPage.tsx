@@ -1,8 +1,8 @@
 import { Content, Layout, Side, SideButton } from "../../components";
 
-export const PlayersPage = () => {
+export const MessagesPage = () => {
   return (
-    <Layout title="Players">
+    <Layout title="Messages">
       <Side>
         <SideButton label="All" current />
         <SideButton label="Newbies" />
