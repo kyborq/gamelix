@@ -1,6 +1,6 @@
 version: "3"
 services:
-  database:
+  gamelix:
     image: mongo:latest
     volumes:
       - ./data:/data/db

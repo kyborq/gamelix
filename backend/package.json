@@ -8,11 +8,13 @@
     "cors": "^2.8.5",
     "hono": "^4.3.3",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.3.4"
+    "mongoose": "^8.3.4",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",
     "@types/bun": "latest",
-    "@types/jsonwebtoken": "^9.0.6"
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/uuid": "^9.0.8"
   }
 }
