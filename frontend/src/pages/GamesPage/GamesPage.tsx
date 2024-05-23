@@ -1,4 +1,4 @@
-import { Button, Card, PageHeader } from "../../components";
+import { Button, Card, Grid, PageHeader } from "../../components";
 import { CategoryButton } from "../../components/CategoryButton";
 
 export const GamesPage = () => {
@@ -10,6 +10,16 @@ export const GamesPage = () => {
         <CategoryButton label="Drafts" />
         <CategoryButton label="Trash" />
       </PageHeader>
+      <Grid
+        items={[
+          { id: "1", path: "/asd", title: "asdfasfds" },
+          { id: "2", path: "/asd", title: "asdfasfds" },
+          { id: "3", path: "/asd", title: "asdfasfds" },
+          { id: "4", path: "/asd", title: "asdfasfds" },
+          { id: "5", path: "/asd", title: "asdfasfds" },
+        ]}
+        renderItem={(item) => <div />}
+      />
     </>
   );
 };
