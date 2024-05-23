@@ -45,7 +45,7 @@ export const Chart = ({ data }: Props) => {
   const linePath = lineBuilder(data);
 
   return (
-    <svg width="100%" height="100%" ref={chartRef} overflow="visible">
+    <svg width="100%" height="100" ref={chartRef} overflow="visible">
       <path d={linePath!} stroke="#16DB65" fill="none" strokeWidth={2} />
     </svg>
   );

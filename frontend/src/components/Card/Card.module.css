@@ -3,6 +3,9 @@
   border-radius: 18px;
   padding: 32px;
   user-select: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .Title {

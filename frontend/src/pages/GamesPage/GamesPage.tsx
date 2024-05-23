@@ -1,5 +1,6 @@
 import { Button, Card, Grid, PageHeader } from "../../components";
 import { CategoryButton } from "../../components/CategoryButton";
+import { GameCard } from "./components/GameCard";
 
 export const GamesPage = () => {
   return (
@@ -18,7 +19,7 @@ export const GamesPage = () => {
           { id: "4", path: "/asd", title: "asdfasfds" },
           { id: "5", path: "/asd", title: "asdfasfds" },
         ]}
-        renderItem={(item) => <div />}
+        renderItem={(item) => <GameCard title={item.title} url={item.path} />}
       />
     </>
   );
