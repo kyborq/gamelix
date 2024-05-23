@@ -13,11 +13,11 @@ export const GamesPage = () => {
       </PageHeader>
       <Grid
         items={[
-          { id: "1", path: "/asd", title: "asdfasfds" },
-          { id: "2", path: "/asd", title: "asdfasfds" },
-          { id: "3", path: "/asd", title: "asdfasfds" },
-          { id: "4", path: "/asd", title: "asdfasfds" },
-          { id: "5", path: "/asd", title: "asdfasfds" },
+          { id: "1", path: "/project", title: "demo-project-1" },
+          { id: "2", path: "/project", title: "demo-project-2" },
+          { id: "3", path: "/project", title: "demo-project-3" },
+          { id: "4", path: "/project", title: "demo-project-4" },
+          { id: "5", path: "/project", title: "demo-project-5" },
         ]}
         renderItem={(item) => <GameCard title={item.title} url={item.path} />}
       />

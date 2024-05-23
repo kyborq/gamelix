@@ -19,8 +19,17 @@
   transition: 250ms;
 }
 
+.Button:active {
+  transform: scale(0.96);
+  transition: 250ms;
+}
+
 .Button.Current {
   background-color: #ced4da;
   color: #212529;
   transition: 250ms;
+}
+
+.Button.Current:active {
+  transform: scale(1);
 }

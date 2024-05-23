@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 
-import { GamesPage, Root } from "./pages";
+import { GamePage, GamesPage, PlayersPage, Root } from "./pages";
 
 export const router = createBrowserRouter([
   {
@@ -10,6 +10,20 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <GamesPage />,
+      },
+      {
+        path: "/profile",
+        element: <GamesPage />,
+      },
+      {
+        path: ":game",
+        element: <GamePage />,
+        children: [
+          {
+            index: true,
+            element: <PlayersPage />,
+          },
+        ],
       },
     ],
   },

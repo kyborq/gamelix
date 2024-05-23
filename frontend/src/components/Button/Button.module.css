@@ -17,4 +17,5 @@
 .Button:active {
   transform: scale(0.98);
   transition: 250ms;
+  background-color: #14bd58;
 }

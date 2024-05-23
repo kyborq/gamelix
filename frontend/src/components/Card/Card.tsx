@@ -12,7 +12,7 @@ export const Card = ({ title }: Props) => {
       <Chart
         data={[
           { x: 0, y: 0 },
-          { x: 1, y: 0 },
+          { x: 1, y: 5 },
         ]}
       />
     </div>
