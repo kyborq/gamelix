@@ -13,7 +13,7 @@ type Props = {
 
 export const CreateGameForm = ({ modal }: Props) => {
   const navigate = useNavigate();
-  const { register, handleSubmit, reset } = useForm<TCreateGame>();
+  const { register, handleSubmit, reset, setValue } = useForm<TCreateGame>();
   const { createGame } = useCreateGame((game) => {
     reset();
     modal.close();
@@ -24,9 +24,26 @@ export const CreateGameForm = ({ modal }: Props) => {
     createGame(data);
   };
 
+  const sanitizeInput = (value: string) => {
+    const lowercasedValue = value.toLowerCase(); // Convert to lowercase
+    const alphanumericValue = lowercasedValue.replace(/[^a-z0-9\s-]/g, ""); // Remove non-alphanumeric characters except spaces and hyphens
+    const hyphenatedValue = alphanumericValue.replace(/\s+/g, "-"); // Replace spaces with hyphens
+    const sanitizedValue = hyphenatedValue.replace(/-+/g, "-"); // Replace multiple hyphens with a single hyphen
+    return sanitizedValue;
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const sanitizedValue = sanitizeInput(e.target.value);
+    setValue("name", sanitizedValue);
+  };
+
   return (
     <Modal state={modal} title="Create Game">
-      <Field placeholder="game-name" {...register("name")} />
+      <Field
+        placeholder="game-name"
+        {...register("name")}
+        onChange={handleInputChange}
+      />
       <Button label="Save!" onClick={handleSubmit(handleCreateGame)} />
     </Modal>
   );
