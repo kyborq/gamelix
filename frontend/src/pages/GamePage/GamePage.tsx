@@ -1,13 +1,24 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 
 import { Button, PageHeader } from "../../components";
 import { CategoryButton } from "../../components/CategoryButton";
+import { useGameInfo } from "./hooks/useGameInfo";
 
 export const GamePage = () => {
+  const { game } = useParams();
+  const gameInfo = useGameInfo(game);
+
+  if (!gameInfo) {
+    return null;
+  }
+
   return (
     <>
       <PageHeader
-        title="Game Project 1"
+        title={gameInfo.name
+          .split("-")
+          .map((word) => `${word[0].toUpperCase()}${word.slice(1)}`)
+          .join(" ")}
         action={<Button label="Edit" />}
         primary
       >

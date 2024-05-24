@@ -34,5 +34,5 @@ export async function createGame(name: string) {
   const savedGame = await game.save();
   const updatedGame = await createGameToken(savedGame.id);
 
-  return { game: updatedGame };
+  return updatedGame;
 }

@@ -1,7 +1,11 @@
 import { Hono } from "hono";
 import { HTTPException } from "hono/http-exception";
 
-import { createGame, findAllGames } from "../repositories/game.repository";
+import {
+  createGame,
+  findAllGames,
+  findGame,
+} from "../repositories/game.repository";
 
 type CreateGame = {
   name: string;
@@ -11,7 +15,16 @@ const app = new Hono();
 
 app.get(async (c) => {
   const games = await findAllGames();
-  return c.json({ games });
+  return c.json({
+    status: 200,
+    content: games,
+  });
+});
+
+app.get(":game", async (c) => {
+  const gameName = c.req.param("game");
+  const game = await findGame(gameName);
+  return c.json(game);
 });
 
 app.post(async (c) => {

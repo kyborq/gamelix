@@ -2,8 +2,9 @@ import mongoose from "mongoose";
 
 export interface IGame {
   name: string;
+  isDraft: boolean;
+  isDeleted: boolean;
   token?: string;
-  players: mongoose.Types.ObjectId[];
 }
 
 const gameSchema = new mongoose.Schema<IGame>({
@@ -15,12 +16,14 @@ const gameSchema = new mongoose.Schema<IGame>({
     type: String,
     default: null,
   },
-  players: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Player",
-    },
-  ],
+  isDraft: {
+    type: Boolean,
+    default: true,
+  },
+  isDeleted: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const Game = mongoose.model<IGame>("Game", gameSchema);
