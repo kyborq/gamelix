@@ -21,13 +21,8 @@ app.get(async (c) => {
   });
 });
 
-app.get(":game", async (c) => {
-  const gameName = c.req.param("game");
-  const game = await findGame(gameName);
-  return c.json(game);
-});
-
 app.post(async (c) => {
+  console.log("create");
   const { name } = await c.req.json<CreateGame>();
 
   const game = await createGame(name);
@@ -35,6 +30,12 @@ app.post(async (c) => {
     throw new HTTPException(403, { message: "Game name has to be unique" });
   }
 
+  return c.json(game);
+});
+
+app.get(":game", async (c) => {
+  const gameName = c.req.param("game");
+  const game = await findGame(gameName);
   return c.json(game);
 });
 
